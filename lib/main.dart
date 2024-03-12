@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'data.dart';
 import 'home.dart';
 import 'modelo.dart';
-
 import 'home.dart';
 
 final dbHelper = DatabaseHelper();
@@ -61,6 +61,16 @@ class MyHomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: _delete,
               child: const Text('delete'),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ViewData()),
+                );
+              },
+              child: const Text('viewData'),
             ),
           ],
         ),
